@@ -2,24 +2,6 @@
 
 A production-ready full-stack e-commerce application built with the MERN stack and deployed on AWS cloud infrastructure. Features complete user authentication, product management, shopping cart, order processing, and secure payment integration with automated AWS deployment.
 
-## Architecture & AWS Infrastructure
-
-### Cloud Architecture
-┌─────────────────┐ ┌──────────────────┐ ┌─────────────────┐
-│ React.js │ │ Node.js/ │ │ MongoDB │
-│ Frontend │◄──►│ Express.js │◄──►│ Atlas │
-│ (CloudFront) │ │ (Elastic │ │ (Cloud DB) │
-│ │ │ Beanstalk) │ │ │
-└─────────────────┘ └──────────────────┘ └─────────────────┘
-│ │ │
-│ │ │
-▼ ▼ ▼
-┌─────────────────┐ ┌──────────────────┐ ┌─────────────────┐
-│ AWS S3 │ │ AWS IAM │ │ AWS CloudWatch│
-│ (Static │ │ (Security & │ │ (Monitoring & │
-│ Hosting & │ │ Roles) │ │ Logging) │
-│ File Storage) │ │ │ │ │
-└─────────────────┘ └──────────────────┘ └─────────────────┘
 
 ### AWS Services Implemented
 - **Elastic Beanstalk**: Automated deployment and scaling of Node.js backend
@@ -55,32 +37,6 @@ A production-ready full-stack e-commerce application built with the MERN stack a
 - **IAM Policies**: Secure resource access
 - **Environment Configuration**: Secure credential management
 
-##  Project Structure
-ecommerce-store/
-├──  backend/ # Node.js/Express API
-│ ├──  .ebextensions/ # AWS Elastic Beanstalk config
-│ ├──  config/ # Database & AWS configuration
-│ ├──  controllers/ # Route controllers
-│ ├──  middleware/ # Auth & upload middleware
-│ ├──  models/ # MongoDB models
-│ ├──  routes/ # API routes
-│ ├──  uploads/ # Local file storage (dev)
-│ ├──  Dockerfile # Container configuration
-│ ├──  server.js # Entry point
-│ └──  package.json
-├──  frontend/ # React.js application
-│ ├──  public/ # Static files
-│ ├──  src/
-│ │ ├──  components/ # Reusable components
-│ │ ├──  context/ # React context providers
-│ │ ├──  pages/ # Page components
-│ │ ├──  services/ # API service layer
-│ │ └──  App.js # Main app component
-│ └──  package.json
-├──  docs/ # Deployment documentation
-├──  deploy.sh # Deployment script
-├──  aws-setup.md # AWS configuration guide
-└──  README.md
 
 ## Features
 
