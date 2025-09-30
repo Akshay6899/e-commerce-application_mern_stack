@@ -79,15 +79,15 @@ A production-ready full-stack e-commerce application built with the MERN stack a
 - MongoDB Atlas account
 - Stripe account for payments
 
-### Backend Setup
+## Backend Setup
 
 cd backend
 npm install
 cp .env.example .env
-# Configure your environment variables
+### Configure your environment variables
 npm run dev
 
-### Frontend Setup
+## Frontend Setup
 
 cd frontend
 npm install
@@ -105,10 +105,10 @@ AWS Deployment Steps
 ## 1. Backend to Elastic Beanstalk
 cd backend
 
-# Initialize EB environment
+### Initialize EB environment
 eb init
 
-# Create and deploy
+### Create and deploy
 eb create ecommerce-production
 eb deploy
 
@@ -116,11 +116,11 @@ eb deploy
 cd frontend
 npm run build
 
-# Upload build/ to S3 bucket
+### Upload build/ to S3 bucket
 aws s3 sync build/ s3://your-bucket-name --delete
 
-# Create CloudFront distribution
-# Configure S3 bucket as origin
+### Create CloudFront distribution
+### Configure S3 bucket as origin
 
 ## 3. Database Configuration
 
@@ -139,18 +139,18 @@ AWS_SECRET_ACCESS_KEY=your_aws_secret_key
 S3_BUCKET_NAME=your_s3_bucket_name
 
 
-### Manual Deployment
-# Build frontend
+## Manual Deployment
+### Build frontend
 cd frontend
 npm run build
 
-# Deploy backend
+### Deploy backend
 cd backend
 npm start
 
 ### AWS Infrastructure Details
 
-# Elastic Beanstalk Configuration
+## Elastic Beanstalk Configuration
 
 1. Platform: Node.js 18
 
@@ -162,7 +162,7 @@ npm start
 
 5. Auto Scaling: 2-8 instances
 
-# S3 Bucket Configuration
+## S3 Bucket Configuration
 
 1. Frontend Bucket: Static website hosting enabled
 
@@ -172,7 +172,7 @@ npm start
 
 4. Bucket Policies: Public read access for frontend
 
-# CloudFront Distribution
+## CloudFront Distribution
 
 1. Origin: S3 bucket
 
@@ -182,9 +182,9 @@ npm start
 
 4. Price Class: Global distribution
 
-### Security Implementation
+## Security Implementation
 
-# AWS Security
+### AWS Security
 
 1. IAM roles with least privilege
 
@@ -196,7 +196,7 @@ npm start
 
 5. Database IP whitelisting
 
-# Application Security
+### Application Security
 
 1. JWT token expiration
 
@@ -208,9 +208,9 @@ npm start
 
 5. XSS protection
 
-### Monitoring & Logging
+## Monitoring & Logging
 
-# AWS CloudWatch
+### AWS CloudWatch
 
 1. Application logs
 
@@ -220,7 +220,7 @@ npm start
 
 4. Custom alarms
 
-# Application Monitoring
+### Application Monitoring
 
 1. Request/response logging
 
@@ -230,11 +230,11 @@ npm start
 
 4. User activity analytics
 
-### CI/CD Pipeline
+## CI/CD Pipeline
 
-# Automated Deployment
+### Automated Deployment
 
-# .github/workflows/deploy.yml
+### .github/workflows/deploy.yml
 name: Deploy to AWS
 on:
   push:
@@ -257,7 +257,7 @@ jobs:
       - run: aws s3 sync frontend/build/ s3://${{ secrets.S3_BUCKET }} --delete
       
 
-### Usage
+## Usage
 
 1. Register/Login - Create an account or login
 
@@ -269,7 +269,7 @@ jobs:
 
 5. Order Tracking - View order history and status
 
-### Admin Features
+## Admin Features
 
 1. Add/edit/delete products
 
@@ -279,7 +279,7 @@ jobs:
 
 4. View sales analytics
 
-### Contributing
+## Contributing
 
 1. Fork the project
 
@@ -291,15 +291,18 @@ jobs:
 
 5. Open a Pull Request
 
-### License
+## License
 
 This project is licensed under the MIT License.
 
-### Author
+## Author
 
 Akshay BM - https://github.com/Akshay6899
 
-### Acknowledgments
+## Acknowledgments
 
-React community, MongoDB Atlas. Stripe for payment processing, AWS for cloud services
+1. React community
+2. MongoDB Atlas
+3. Stripe for payment processing
+4. AWS for cloud services
 
