@@ -80,7 +80,7 @@ A production-ready full-stack e-commerce application built with the MERN stack a
 - Stripe account for payments
 
 ### Backend Setup
-```terminal
+
 cd backend
 npm install
 cp .env.example .env
@@ -88,7 +88,7 @@ cp .env.example .env
 npm run dev
 
 ### Frontend Setup
-```terminal
+
 cd frontend
 npm install
 npm start
